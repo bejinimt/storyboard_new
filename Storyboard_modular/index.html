@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>Mini-Storyboard</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div id="top">
+
+  <!-- Linke Seite: Eingabe + Buttons -->
+  <div id="eingabe">
+    <textarea id="eingabetext" rows="4" cols="30" placeholder="Text eingeben…"></textarea>
+
+    <div style="font-size:12px; margin-top:5px;">
+      Strg + Enter = Text einfügen<br>
+      Strg + V = Bild einfügen<br>
+      Shift beim Skalieren = Seitenverhältnis fix
+    </div>
+
+    <div id="buttons">
+      <!-- Queue-Funktionen -->
+      <button id="addText">Text hinzufügen</button>
+      <button id="addImage">Bild hinzufügen</button>
+      <button id="clearQueue">Queue leeren</button>
+
+      <!-- Speicherfunktionen -->
+      <button id="saveBtn">Speichern</button>
+      <button id="loadBtn">Laden</button>
+      <input type="file" id="loadFile" accept=".json" style="display:none">
+    </div>
+
+    <div id="recentFiles" style="margin-top:10px; font-size:12px;">
+      <b>Zuletzt gespeichert:</b>
+      <ul id="recentList"></ul>
+    </div>
+  </div>
+
+  <!-- Queue -->
+  <div id="queue"></div>
+
+  <!-- Storyboard -->
+  <div id="storyboard"></div>
+
+</div>
+
+<!-- Pool-Bereich -->
+<div id="pool"><b>Pool:</b> (Doppelklick bringt Element zurück)</div>
+
+<!-- Skripte -->
+<script src="script.js"></script>
+<script src="paste-image.js"></script>
+
+</body>
+</html>

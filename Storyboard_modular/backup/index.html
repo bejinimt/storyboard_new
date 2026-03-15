@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>Mini-Storyboard</title>
+
+<!-- Externe CSS-Datei -->
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div id="top">
+  <div id="eingabe">
+    <textarea id="text" rows="4" cols="30" placeholder="Text eingeben…"></textarea>
+
+    <div style="font-size:12px; margin-top:5px;">
+      Strg + Enter = Text einfügen<br>
+      Strg + V = Bild einfügen<br>
+      Shift beim Skalieren = Seitenverhältnis fix
+    </div>
+
+    <div id="buttons">
+      <button id="saveBtn">Speichern</button>
+      <button id="loadBtn">Laden</button>
+      <input type="file" id="loadFile" accept=".json" style="display:none">
+    </div>
+
+    <div id="recentFiles" style="margin-top:10px; font-size:12px;">
+      <b>Zuletzt gespeichert:</b>
+      <ul id="recentList"></ul>
+    </div>
+
+
+  </div>
+
+  <!-- NEU: Queue-Spalte -->
+  <div id="queue"></div>
+
+  <div id="storyboard"></div>
+
+</div>
+
+<div id="pool"><b>Pool:</b> (Doppelklick bringt Element zurück)</div>
+
+<script src="drag.js"></script>
+<script src="resize.js"></script>
+<script src="text.js"></script>
+<script src="image.js"></script>
+<script src="storyboard.js"></script>
+<script src="paste.js"></script>
+<script src="pool.js"></script>
+<script src="saveLoad.js"></script>
+<script src="queue.js"></script>     <!-- NEU -->
+<script src="keyboard.js"></script>
+<script src="app.js"></script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,178 @@
+/* ---------------------------------------------------------
+   Grundlayout
+--------------------------------------------------------- */
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+#top {
+  display: flex;
+  height: calc(100vh - 120px); /* Platz für Pool */
+  overflow: hidden;
+}
+
+
+/* ---------------------------------------------------------
+   Linke Seite: Eingabe + Buttons + Queue
+--------------------------------------------------------- */
+
+#eingabe {
+  width: 260px;
+  background: white;
+  padding: 12px;
+  border-right: 2px solid #ccc;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+#eingabetext {
+  width: 100%;
+  height: 80px;
+  box-sizing: border-box;
+  padding: 6px;
+  font-size: 14px;
+  resize: vertical;
+}
+
+
+/* ---------------------------------------------------------
+   Buttons
+--------------------------------------------------------- */
+
+#buttons {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+#buttons button {
+  padding: 6px 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+
+/* ---------------------------------------------------------
+   Queue
+--------------------------------------------------------- */
+
+#queue {
+  margin-top: 15px;
+  overflow-y: auto;
+  max-height: calc(100vh - 300px);
+}
+
+.queue-item {
+  padding: 10px;
+  border: 1px solid #aaa;
+  border-radius: 6px;
+  background: #fafafa;
+  margin-bottom: 10px;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.queue-item.selected {
+  border-color: #0078ff;
+  background: #e6f0ff;
+}
+
+.queue-item img {
+  max-width: 100%;
+  max-height: 60px;
+  display: block;
+}
+
+
+/* ---------------------------------------------------------
+   Storyboard
+--------------------------------------------------------- */
+
+#storyboard {
+  flex: 1;
+  position: relative;
+  background: #f4f4f4;
+  overflow: auto;
+}
+
+
+/* ---------------------------------------------------------
+   Elemente im Storyboard (.info)
+--------------------------------------------------------- */
+
+.info {
+  position: absolute;
+  background: white;
+  border: 1px solid #aaa;
+  border-radius: 6px;
+  padding: 10px 30px 10px 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  cursor: move;
+  user-select: none;
+  resize: both;
+  overflow: hidden;
+  z-index: 3;
+  box-sizing: border-box;
+  white-space: pre-wrap;
+}
+
+.info img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+
+/* ---------------------------------------------------------
+   Close-Button
+--------------------------------------------------------- */
+
+.close {
+  position: absolute;
+  right: 6px;
+  top: 6px;
+  width: 20px;
+  height: 20px;
+  background: #ffdddd;
+  border: 1px solid #cc0000;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 18px;
+  cursor: pointer;
+  font-weight: bold;
+  z-index: 4;
+}
+
+
+/* ---------------------------------------------------------
+   Pool-Bereich
+--------------------------------------------------------- */
+
+#pool {
+  width: 100%;
+  background: #fff8e1;
+  border-top: 2px solid #ccc;
+  padding: 10px;
+  font-size: 14px;
+  box-sizing: border-box;
+  height: 120px;
+  overflow-y: auto;
+}
+
+#pool b {
+  display: block;
+  margin-bottom: 6px;
+}
+
+#pool .info {
+  position: relative !important;
+  display: inline-block;
+  margin: 5px;
+  width: 150px;
+  height: 150px;
+  cursor: pointer;
+}
